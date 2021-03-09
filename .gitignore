@@ -6,7 +6,7 @@
 *.user
 *.userosscache
 *.sln.docstates
-*TwitchInfo.resx
+*.resx
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
