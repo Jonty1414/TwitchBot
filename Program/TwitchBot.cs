@@ -72,18 +72,18 @@ namespace Program
 
         private void Client_OnMessageReceived(object sender, OnMessageReceivedArgs e)
         {
-            if (e.ChatMessage.Message.Contains("!clip") || e.ChatMessage.Message.Contains("hello"))
+            if (e.ChatMessage.Message.Contains("!clip"))
             {
                 API.Helix.Clips.CreateClipAsync(TwitchInfo.ChannelName, TwitchInfo.AccessToken);
                 client.SendMessage(TwitchInfo.ChannelName, "Attempting to generate clip...");
             }
             if (e.ChatMessage.Message.Contains("hi") || e.ChatMessage.Message.Contains("hello"))
             {
-                client.SendMessage(TwitchInfo.ChannelName, "hi i am a twitch bot created by Jontycr, if you enjoy the stream please drop a follow.");
+                client.SendMessage(TwitchInfo.ChannelName, "hi i am a twitch bot created by Jontycr.");
             }
-            if (e.ChatMessage.Message.Contains("!job"))
+            if (e.ChatMessage.Message.Contains("job"))
             {
-                client.SendMessage(TwitchInfo.ChannelName, "my job is to react to chat based on ingame events");
+                client.SendMessage(TwitchInfo.ChannelName, "my job is to type in chat based on ingame events");
             }
         }
 
